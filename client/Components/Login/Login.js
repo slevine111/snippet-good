@@ -4,24 +4,18 @@ import { Redirect } from 'react-router-dom'
 import { connect } from 'react-redux'
 
 import Paper from '@material-ui/core/Paper'
-import Tabs from '@material-ui/core/Tabs'
-import Tab from '@material-ui/core/Tab'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import AppBar from '@material-ui/core/AppBar'
 import Typography from '@material-ui/core/Typography'
 import Toolbar from '@material-ui/core/Toolbar'
 
 import LoginForm from './LoginForm'
-import SignUpForm from './SignUpForm'
 
 class Login extends Component {
   // This state is used to set the tabs to active.
-  state = { value: 0 }
-  handleValueChange = (event, value) => this.setState({ value })
 
   render() {
-    const { handleValueChange, redirect } = this
-    const { value } = this.state
+    const { redirect } = this
     const { userDetails } = this.props
 
     if (userDetails.id)
@@ -39,20 +33,8 @@ class Login extends Component {
         </AppBar>
         <div style={styles.root}>
           <Paper style={styles.paper}>
-            <Tabs
-              value={value}
-              indicatorColor="primary"
-              textColor="primary"
-              variant="fullWidth"
-              onChange={handleValueChange}
-            >
-              <Tab label="Login" />
-              <Tab label="Sign Up" />
-            </Tabs>
-
             <div style={styles.form}>
-              {value === 0 && <LoginForm redirect={redirect} />}
-              {value === 1 && <SignUpForm redirect={redirect} />}
+              <LoginForm redirect={redirect} />
             </div>
           </Paper>
         </div>
