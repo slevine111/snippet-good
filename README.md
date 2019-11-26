@@ -1,15 +1,22 @@
-# Codejar
+# CodeJar
 
 CodeJar is an educational platform for Fullstack students and instructors to manage coding exercises. Instructors can create, assign, and review coding exercises (AKA 'stretches') while also keeping track of attendance and the overall performance of their cohort. Students can submit answers, review their work, and track their personal progress throughout their program.
 
 Deployed app is at https://my-codejar.herokuapp.com/
+
+*Tech Stack*
+
+- **backend**: Node, Express, Sequelize, PostgreSQL
+- **frontend**: React, Redux, Redux-Thunk, Material-UI, d3
+- **tooling/deployment**: Webpack, Babel, Heroku
+- **other**: Socket.io
 
 ## Setup
 
 **Install OS level dependencies**
 
 - Node
-- PostgresQL
+- PostgreSQL
 
 **Install app requirements**
 
